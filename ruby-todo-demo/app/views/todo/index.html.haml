@@ -1,0 +1,23 @@
+.todo-wrapper
+  .todo-header todos
+  .todo-container
+    .todo-input-box
+      .todo-input-icon
+      %input.todo-input(type="text" placeholder="What needs to be done?")
+    .todo-list-box
+      %ul.todo-list.todo-list-item-last
+
+  .todo-footer
+    %a.todo-left
+      %span#todo-left-num
+      %span items left
+
+    %a.todo-footer-item.filter All
+    %a.todo-footer-item.filter Active
+    %a.todo-footer-item.filter Completed
+    %a.todo-footer-item#clear_all_completed_todo
+      %span Clear completed
+      %span#todo-clear-num (0)
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<title>angularjs_demo</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <link href="css/demo.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+
+        <script src = "js/jquery-2.0.0.min.js"></script>
+        <script src = "js/bootstrap.js"></script>
+        <script src = "js/bootstrap.min.js"></script>
+        <script src = "js/angular.min.js"></script>
+        <script src = "js/demo.js"></script>
+
+	</head>
+	<body ng-controller="MyTagController">
+        <div id = "wrap">
+            <div id = "my_tag">
+                <label>Tag:</label>
+                <input type = "text" class = "form-control" placeholder="请输入便签内容" ng-model="new_tag" ng-keydown = "storage_tag(new_tag)">
+            </div>
+            <br />
+            <div ng-model = "status" id = "show_tags" ng-repeat="tag in tags_group | filter:status">
+                <div id ={{$index}} class = "tag_list form-control {{tag['tag_status']}}" >{{tag["tag_name"]}}
+                    <button class = 'change_status_btn btn btn-danger btn-xs pull-right' ng-click="delete_the_tag($tag['tag_name'])">delete</button>
+                    <button class = 'change_status_btn btn btn-success btn-xs pull-right' ng-click="change_tag_status('completed',$index)">completed</button>
+                    <button class = 'change_status_btn btn btn-primary btn-xs pull-right' ng-click="change_tag_status('active',$index)">active</button>
+                </div>
+            </div>
+            <br />
+            <div class = "tag_filter">
+                <button class = "filter_btn btn btn-default pull-left" ng-click="filter_tags('all')">All</button>
+                <button class = "filter_btn btn btn-primary pull-left" ng-click="filter_tags('active')">Active</button>
+                <button class = "filter_btn btn btn-success pull-left" ng-click="filter_tags('completed')">Completed</button>
+                <button class = "filter_btn btn btn-danger pull-left" ng-click="delete_completed_tags()">ClearAllCompleted</button>
+                <p class = "tags_num pull-right" >0 items</p>
+            </div>
+        </div>
+	</body>
+</html>

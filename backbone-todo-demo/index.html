@@ -1,0 +1,64 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>todos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="styles/todo.css">
+
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/underscore.js"></script>
+        <script src="scripts/backbone.js"></script>
+        <script src="scripts/backbone.localStorage.js"></script>
+        <script src="scripts/todo.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <div class="todo-wrapper">
+            <div class="todo-header">todos</div>
+            <div class="todo-container">
+                <div class="todo-input-box">
+                    <a class="todo-input-icon"></a>
+                    <input type="text" placeholder="What needs to be done?" class="todo-input"/>
+                </div>
+                <div class="todo-list-box">
+                    <ul class="todo-list todo-list-item-last">
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="todo-footer">
+                <a class="todo-left">
+                    <span id="todo-left-num"></span>
+                    <span>items left</span>
+                </a>
+
+                <a class="todo-footer-item filter">All</a>
+                <a class="todo-footer-item filter">Active</a>
+                <a class="todo-footer-item filter">Completed</a>
+                <a class="todo-footer-item" id="clear_all_completed_todo" >
+                    <span>Clear completed</span>
+                    <span id="todo-clear-num">(0)</span>
+                </a>
+            </div>
+        </div>
+
+        <script type="text/template" id="todo-template">
+            <li class='todo-list-item'>
+                <a class='todo-item-active'></a>
+                <span class='todo-item-content <%= active == false ? 'completed' : '' %>'><%= context %></span>
+                <a class='todo-item-remove'></a>
+            </li>
+        </script>
+</body>
+</html>
+

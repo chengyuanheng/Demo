@@ -1,0 +1,36 @@
+#wrap{
+    padding-top: 20px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tags_num{
+    margin-right: 15px;
+}
+
+.none{
+    border-color:#ccc !important;
+}
+
+.active{
+    background:#31b0d5 !important;
+    border-color:#357ebd !important;
+}
+
+.completed{
+    background:#4cae4c !important;
+    border-color:#398439 !important;
+}
+
+.filter_btn{
+    margin-left:5px;
+}
+
+.tag_list{
+    margin-top: 5px;
+}
+
+.change_status_btn{
+    margin-right: 7px;
+}
