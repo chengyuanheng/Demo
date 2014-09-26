@@ -12,30 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label '名称' %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label '分类' %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label '描述' %><br>
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :status %><br>
-    <%= f.check_box :status %>
-  </div>
-  <div class="field">
-    <%= f.label :remark %><br>
+    <%= f.label '标记' %><br>
     <%= f.text_field :remark %>
   </div>
   <div class="field">
-    <%= f.label :price %><br>
+    <%= f.label '单价' %><br>
     <%= f.text_field :price %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :id=>'submit', :value=>"提交"%>
   </div>
 <% end %>

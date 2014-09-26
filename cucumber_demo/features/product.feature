@@ -15,8 +15,11 @@ Feature: Order Product
 
   Scenario:  Create new Product
     When I come in /products/new page
-    And  I enter title in title input
-    And  I enter description in description input
-    And  I click create button
-    Then I should come in product create success page
+    And  I enter 笔记本 in name input
+    And  I enter 学习用具 in title input
+    And  I enter 晨光笔记本 in description input
+    And  I enter 库存紧张 in remark input
+    And  I enter 3元 in price input
+    And  I click submit button
+    Then I should create a new product which name is 笔记本
 

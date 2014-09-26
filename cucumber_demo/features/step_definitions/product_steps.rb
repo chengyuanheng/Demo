@@ -18,22 +18,40 @@ end
 
 When /I come in (.*) page/ do |create_path|
   visit create_path
-  sleep(5)
+  sleep(2)
+end
+
+And /I enter (.*) in name input/ do |name|
+  fill_in "product_name", :with => name
+  sleep(1)
 end
 
 And /I enter (.*) in title input/ do |title|
-
+  fill_in "product_title", :with => title
+  sleep(1)
 end
 
 And /I enter (.*) in description input/ do |description|
-
+  fill_in "product_description", :with => description
+  sleep(1)
 end
 
-And  /I click create button/ do
-
+And /I enter (.*) in remark input/ do |remark|
+  fill_in "product_remark", :with => remark
+  sleep(1)
 end
 
-Then /I should come in product create success page/ do
+And /I enter (.*) in price input/ do |price|
+  fill_in "product_price", :with => price
+  sleep(1)
+end
 
+And  /I click (.*) button/ do |submit|
+  page.find('#'+submit).click
+  sleep(1)
+end
+
+Then /I should create a new product which name is (.*)/ do |name|
+  Product.where(:name=>name).present?
 end
 

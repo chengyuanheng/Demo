@@ -71,10 +71,8 @@ Capybara.add_selector(:class) do
 end
 
 Capybara.configure do |config|
-
   config.default_wait_time = 15
   config.default_driver = :chrome
   config.javascript_driver = :chrome
   config.ignore_hidden_elements = false
-
 end
