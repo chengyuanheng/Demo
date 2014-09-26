@@ -18,7 +18,7 @@ end
 
 When /I come in (.*) page/ do |create_path|
   visit create_path
-  sleep(2)
+  sleep(1)
 end
 
 And /I enter (.*) in name input/ do |name|
@@ -51,7 +51,6 @@ And  /I click (.*) button/ do |submit|
   sleep(1)
 end
 
-Then /I should create a new product which name is (.*)/ do |name|
-  Product.where(:name=>name).present?
+Then /I should create a new product/ do
+  expect(page).to have_text('Product was successfully created.')
 end
-

@@ -21,5 +21,5 @@ Feature: Order Product
     And  I enter 库存紧张 in remark input
     And  I enter 3元 in price input
     And  I click submit button
-    Then I should create a new product which name is 笔记本
+    Then I should create a new product
 
