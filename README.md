@@ -8,3 +8,4 @@ File Lists
   4. backbone-todo-demo    #第三次做todo 粗略的学习了下backbone 正好赶上离职期间 没有做完
   5. chart_js_demo         #看了下chart_js画图表，很简单，效果还不错
   6. grumble_js_demo       #个人感觉grumble_js只是用了些css3和一点动画，没什么好看的
+  7. cucumber_demo         #基于rails框架的cucumber测试 另附:chromedriver_linux64 安装见:http://cckkll.iteye.com/blog/2121354
