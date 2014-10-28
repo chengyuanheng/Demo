@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>you can you up no can no bibi</title>
+    <title>ckkll_blog</title>
+    <link rel="icon" href="images/title.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.circliful.css" />
@@ -11,53 +12,56 @@
     <script src="js/jquery.easings.min.js"></script>
     <script src="js/jquery.slimscroll.min.js"></script>
     <script src="js/jquery.circliful.min.js"></script>
+    <script src="js/capital-0.1.min.js"></script>
     <script src="js/index.js"></script>
     <meta charset="utf-8">
-    <script>
-        $(document).ready(function() {
-            init_full_page();
-            init_circliful();
-        });
-        function init_full_page(){
-            $("#fullpage").fullpage({
-                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#fff'],
-                anchors: ['blog', 'secondPage', 'thirdPage', 'forthpage'],
-                slidesNavigation: true,
-                menu: '#menu'
-            });
-        }
-        function init_circliful(){
-            $('#ruby_on_rails').circliful();
-            $('#javascript').circliful();
-            $('#linux').circliful();
-            $('#git').circliful();
-            $('#other').circliful();
-        }
-    </script>
+
 </head>
 <body>
     <ul id="menu">
-        <li data-menuanchor="blog" class="active"><a href="#blog">blog</a></li>
-        <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
-        <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
-        <li data-menuanchor="forthpage"><a href="#forthpage">Fourth section</a></li>
+        <li data-menuanchor="Blog" class="active"><a href="#Blog">Blog</a></li>
+        <li data-menuanchor="Note"><a href="#Note">Note</a></li>
+        <li data-menuanchor="Book"><a href="#Book">Book</a></li>
+        <li data-menuanchor="Contact"><a href="#Contact">Contact</a></li>
     </ul>
 
     <div id="fullpage">
-        <div class="section">
+        <div class="section section1">
             <a href="blog/ruby_on_rails/index.html"><span id="ruby_on_rails" data-dimension="250" data-text="40%" data-info="ruby on rails" data-width="30" data-fontsize="38" data-percent="40" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></span></a>
             <a href="blog/javascript/index.html"><span id="javascript" data-dimension="250" data-text="30%" data-info="javascript" data-width="30" data-fontsize="38" data-percent="30" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></span></a>
             <a href="blog/linux/index.html"><span id="linux" data-dimension="250" data-text="15%" data-info="linux" data-width="30" data-fontsize="38" data-percent="15" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></span></a>
             <a href="blog/git/index.html"><span id="git" data-dimension="250" data-text="5%" data-info="git" data-width="30" data-fontsize="38" data-percent="5" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></span></a>
             <a href="blog/other/index.html"><span id="other" data-dimension="250" data-text="10%" data-info="other" data-width="30" data-fontsize="38" data-percent="10" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></span></a>
         </div>
-        <div class="section">第二屏</div>
-        <div class="section">
+        <div class="section section2">第二屏</div>
+        <div class="section section3">
             <div class="slide" id="slide1" data-anchor="slide1"><h1>Slide 1</h1></div>
             <div class="slide" id="slide2" data-anchor="slide2"><h1>Slide 2</h1></div>
             <div class="slide" id="slide3" data-anchor="slide3"><h1>Slide 3</h1></div>
         </div>
-        <div class="section">第四屏</div>
+        <div class="section section4">
+            <div class="Contact">
+                <div class='article'>
+                    <h1>About Author</h1>
+                    <p>chengyuanheng(born May 7,1990) is a ruby engineer,</p>
+                </div>
+
+                <div class='article'>
+                    <h1>About Blog</h1>
+                    <p>the blog record </p>
+                </div>
+
+                <div class='article'>
+                    <h1>About website</h1>
+                    <p>the website.......</p>
+                </div>
+
+                <div class='article'>
+                    <h1>About Contact</h1>
+                    <p>Contact me by QQ:237178842 or tel:18733171780 or email:geteshiye@gmail.com</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
