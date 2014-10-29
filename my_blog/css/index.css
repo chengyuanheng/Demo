@@ -82,3 +82,19 @@
 .Contact div.article{
     font-size: 24px;
 }
+
+#dock {
+    width:auto;
+    left: 0;
+    bottom:0;
+    text-align:center;
+    cursor:pointer;
+    padding:5px 20px;
+}
+
+#dock img{
+    margin-left:40px;
+    margin-right:40px;
+    width:200px;
+    height:400px;
+}
