@@ -1,6 +1,7 @@
 $(document).ready(function() {
     init_full_page();
     init_circliful();
+    init_tip_card();
     init_capital_letter();
 });
 
@@ -29,4 +30,8 @@ function init_capital_letter(){
         'font-family': 'kaushan_scriptregular',
         'margin-right': '0.3em'
     });
+}
+
+function init_tip_card(){
+    $(".tips").tip_cards();
 }
